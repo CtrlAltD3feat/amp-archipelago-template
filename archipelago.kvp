@@ -1,0 +1,16 @@
+[Application]
+DisplayName=Archipelago
+OS=3
+Author=Community
+URL=https://archipelago.gg
+DisplayImageSource=none:
+ConfigRoot=Archipelago
+ConfigManifest=ArchipelagoConfig.json
+StartupExecutable=python
+StartupArguments={{AppDirectory}}/MultiServer.py {{SeedFile}}
+StartupWorkingDirectory={{AppDirectory}}
+ProcessName=MultiServer.py
+IsService=false
+DefaultPort=38281
+[Meta]
+ConfigRoot=archipelagoconfig.json

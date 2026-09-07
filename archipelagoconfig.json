@@ -1,0 +1,24 @@
+[
+  {
+    "DisplayName": "Seed File",
+    "Category": "Archipelago",
+    "Subcategory": "Server",
+    "Description": "Path to the .archipelago seed file to host",
+    "FieldName": "SeedFile",
+    "InputType": "text",
+    "ParamFieldName": "SeedFile",
+    "IncludeInCommandLine": true,
+    "DefaultValue": "",
+    "Required": true
+  },
+  {
+    "DisplayName": "Server Port",
+    "Category": "Archipelago",
+    "Subcategory": "Server",
+    "Description": "Port to listen on (default 38281)",
+    "FieldName": "$Port",
+    "InputType": "number",
+    "ParamFieldName": "Port",
+    "DefaultValue": "38281"
+  }
+]
