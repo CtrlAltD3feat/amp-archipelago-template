@@ -13,22 +13,21 @@ Meta.ContainerPolicy=Supported
 Meta.ContainerPolicyReason=
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=2
-Meta.ReleaseNotes=
-Meta.BreakingReleaseNotes=
+Meta.ConfigVersion=3
+Meta.ReleaseNotes=Tracks the Archipelago main branch. Main may break.
+Meta.BreakingReleaseNotes=This template intentionally follows Archipelago main.
 Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ImportableExtensions=[]
-
 App.DisplayName=Archipelago
-App.RootDir=./archipelago/
-App.BaseDirectory=./archipelago/
-App.ExecutableLinux=./venv/bin/python
+App.RootDir=./
+App.BaseDirectory=./
+App.ExecutableLinux=/usr/bin/python3
 App.ExecutableWin=
 App.WorkingDir=
-App.LinuxCommandLineArgs=MultiServer.py {{SeedFile}} --port {{ServerPort}}
+App.LinuxCommandLineArgs=Archipelago-main/MultiServer.py {{SeedFile}} --port {{ServerPort}}
 App.WindowsCommandLineArgs=
-App.CommandLineArgs=MultiServer.py {{SeedFile}} --port {{ServerPort}}
+App.CommandLineArgs=Archipelago-main/MultiServer.py {{SeedFile}} --port {{ServerPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"PYTHONUNBUFFERED":"1"}
@@ -67,9 +66,7 @@ App.RCONSelectIPMethod=Default
 App.TelnetLoginFormat={0}
 App.TelnetNewLineType=Default
 App.TailLogFilePath=
-
-App.UpdateSources=[{"UpdateStageName":"Download Archipelago","UpdateSourcePlatform":"Linux","UpdateSource":"FetchURL","UpdateSourceData":"https://github.com/ArchipelagoMW/Archipelago/archive/refs/heads/main.tar.gz","UpdateSourceTarget":"{{$FullRootDir}}","UnzipUpdateSource":true,"OverwriteExistingFiles":true,"DeleteAfterExtract":true,"SkipOnFailure":false},{"UpdateStageName":"Download Setup Script","UpdateSourcePlatform":"Linux","UpdateSource":"FetchURL","UpdateSourceData":"https://raw.githubusercontent.com/CtrlAltD3feat/amp-archipelago-template/master/setup.sh","UpdateSourceTarget":"{{$FullRootDir}}","UpdateSourceArgs":"setup.sh","OverwriteExistingFiles":true,"SkipOnFailure":false},{"UpdateStageName":"Setup Archipelago","UpdateSourcePlatform":"Linux","UpdateSource":"Executable","UpdateSourceData":"/bin/bash","UpdateSourceArgs":"setup.sh","SkipOnFailure":false}]
-
+App.UpdateSources=[{"UpdateStageName":"Download Archipelago main","UpdateSourcePlatform":"Linux","UpdateSource":"FetchURL","UpdateSourceData":"https://github.com/ArchipelagoMW/Archipelago/archive/refs/heads/main.tar.gz","UpdateSourceTarget":"{{$FullRootDir}}","UnzipUpdateSource":true,"OverwriteExistingFiles":true,"DeleteAfterExtract":true,"SkipOnFailure":false}]
 App.PreStartStages=[]
 App.UserActions=[]
 App.ForceUpdate=False
@@ -85,7 +82,6 @@ App.MonitorChildProcessName=
 App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
-
 App.ApplicationReadyMode=Immediate
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
@@ -102,7 +98,6 @@ Console.HideFromConsoleRegex=
 Console.SuppressLogAtStart=False
 Console.ActivateLogRegex=
 Console.UserActions={}
-
 Limits.SleepMode=False
 Limits.SleepOnStart=False
 Limits.SleepDelayMinutes=5
