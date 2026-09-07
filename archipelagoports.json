@@ -1,0 +1,8 @@
+[
+  {
+    "Name": "ServerPort",
+    "Type": "TCP",
+    "Default": 38281,
+    "Description": "Archipelago server port"
+  }
+]
